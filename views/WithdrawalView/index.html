@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login de Cajero</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../../css/WithdrawalCss/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="containerActionOne">
+            <section>
+                <input type="submit" value="Regresar" id="btnAction" onclick="window.location.href='../ActionView/index.html'">
+            </section>
+        </div>
+        <div class="containerActionTwo">
+            <div class="containerPanel">
+                <form id="form" action="../ActionView/index.html" method="get">
+                  <label for="amount">Ingrese la cantidad de dinero que desea <br> Retirar de su cuenta.</label>
+                  <input type="text" id="amount" name="amount" maxlength="5" placeholder="0.00" onkeypress="return isNumberKey(event)" oninput="formatCurrency()" required>
+                  <label for="amount">Luego presione &#x25cb; para confirmar la <br> transancción</label>
+                </form>
+            </div>
+            <div class="numberPath">
+                <button class="numero">7</button>
+                <button class="numero">8</button>
+                <button class="numero">9</button>
+                <button class="cancel">X</button>
+                <button class="numero">4</button>
+                <button class="numero">5</button>
+                <button class="numero">6</button>
+                <button class="delete">&lt;</button>
+                <button class="numero">1</button>
+                <button class="numero">2</button>
+                <button class="numero">3</button>
+                <button class="clear">|</button>
+                <button class="operador">-</button>
+                <button class="numero">0</button>
+                <button class="operador">+</button>
+                <input type="submit" form="form" value="&#x25cb;" class="success"/>
+              </div>
+        </div>
+    </div>
+    <script>
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        }
+
+        function formatCurrency() {
+            var input = document.getElementById("amount");
+            var value = input.value.replace(/\D/g, "").replace(/^0+/, "");
+            input.value = value.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+        }
+    </script>
+</body>
+</html>

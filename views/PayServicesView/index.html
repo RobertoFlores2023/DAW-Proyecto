@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login de Cajero</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../../css/PayServicesCss/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="containerActionOne">
+            <section>
+                <input type="submit" value="Regresar" id="btnAction" onclick="window.location.href='../ServicesView/index.html'">
+            </section>
+        </div>
+        <div class="containerActionTwo">
+            <div class="containerPanel">
+                <form id="form" action="views/ActionView/index.html" method="get">
+                    <img src="../../resources/Login/pngwing.com (14).png" />
+                  <label for="pin">Ingrese Número de NPE:</label>
+                  <input type="text" id="pin" name="pin" maxlength="10" minlength="10" pattern="\d*" style="text-align: center;" required>
+                </form>
+            </div>
+            <div class="numberPath">
+                <button class="numero">7</button>
+                <button class="numero">8</button>
+                <button class="numero">9</button>
+                <button class="cancel">X</button>
+                <button class="numero">4</button>
+                <button class="numero">5</button>
+                <button class="numero">6</button>
+                <button class="delete">&lt;</button>
+                <button class="numero">1</button>
+                <button class="numero">2</button>
+                <button class="numero">3</button>
+                <button class="clear">|</button>
+                <button class="operador">-</button>
+                <button class="numero">0</button>
+                <button class="operador">+</button>
+                <input type="submit" form="form" value="&#x25cb;" class="success"/>
+              </div>
+        </div>
+    </div>
+</body>
+</html>

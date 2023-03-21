@@ -13,6 +13,14 @@
 *{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.user {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1px;
+  font-size: 14px;
+}
   .backgroundcontainer {
     background-image: url("../../resources/Login/pokeball.png");
     background-repeat: repeat;
@@ -29,6 +37,8 @@
   .containerActionTwo {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
     width: 50%;
     height: 50%;
   }
